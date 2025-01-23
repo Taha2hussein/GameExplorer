@@ -21,4 +21,10 @@ struct MovieAPI: GameRepository {
 
     }
 
+    func searchGame(query: String) -> AnyPublisher<[Giveaway], APIError> {
+        return self.client.performRequest(api: GamesExplorerPIEndPoint.gameSearch(query: query), decodeTo: [Giveaway].self)
+
+    }
+    
+    
 }

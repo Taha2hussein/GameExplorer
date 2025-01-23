@@ -11,8 +11,7 @@ import Moya
 
 enum GamesExplorerPIEndPoint {
     case gamesList
-    case movieSearch(query: String)
-    case movieDtail(movie_id: Int)
+    case gameSearch(query: String)
 }
 
 extension GamesExplorerPIEndPoint: APIEndpoint {
@@ -24,16 +23,15 @@ extension GamesExplorerPIEndPoint: APIEndpoint {
         switch self {
         case .gamesList:
             return  ""
-        case .movieSearch:
-            return "search/movie"
-        case .movieDtail(let movie_id):
-            return "/movie/\(movie_id)"
+        case .gameSearch:
+            return ""
+      
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .gamesList,.movieSearch,.movieDtail:
+        case .gamesList,.gameSearch:
             return .get
         }
     }
@@ -42,20 +40,19 @@ extension GamesExplorerPIEndPoint: APIEndpoint {
         switch self {
         case .gamesList:
             return .requestPlain
-        case .movieSearch(let query):
+        case .gameSearch(let query):
             let urlParameters: [String: Any] = [
-                "query": query
+                "platform": query
             ]
             return .requestParameters(parameters: urlParameters, encoding: .queryString)
             
-        case .movieDtail(let movieId):
-            return .requestPlain
+       
         }
     }
     
     var headers: [String: String] {
         switch self {
-        case .gamesList,.movieSearch,.movieDtail:
+        case .gamesList,.gameSearch:
             return HeadersRequest.shared.getHeaders(type: .normal)
         }
     }

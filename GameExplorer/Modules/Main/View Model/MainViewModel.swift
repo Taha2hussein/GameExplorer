@@ -17,8 +17,9 @@ class MainViewModel: ObservableObject {
     @Published var filteredGames: [Giveaway] = []
     @Published var errorMessage: String?
     @Published var isLoading: Bool = false
-    @Published var selectedCategory: CategoryType = .all // Default category
-    
+    @Published var selectedCategory: CategoryType = .all
+    private var cancellables = Set<AnyCancellable>()
+
     // Injected Dependency for fetching games
     init(gameRepository: GamesRepository = DefaultGamesRepository()) {
         self.gameRepository = gameRepository
@@ -26,7 +27,7 @@ class MainViewModel: ObservableObject {
     }
     
     private func loadCategories() {
-        categories = CategoryType.allCases // Using the enum to get all categories
+        categories = CategoryType.allCases
     }
     
     // Fetch games list and apply category filter
@@ -44,11 +45,26 @@ class MainViewModel: ObservableObject {
     }
     
     // Perform search logic
-    func performSearch() {
-        print("Searching for: \(searchText)")
+    func performSearch()  {
+        isLoading = true
+        gameRepository.searchGame(query: searchText)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    print("Error: \(error.localizedDescription)")
+                }
+            }, receiveValue: { games in
+                self.gameList = games
+                self.filterGamesByCategory()
+            })
+            .store(in: &cancellables)
+
+        isLoading = false
+        print("searchedjjj",searchText)
     }
     
-    // Filter games based on selected category
     func filterGamesByCategory() {
         if selectedCategory == .all {
             filteredGames = gameList
@@ -74,6 +90,6 @@ enum CategoryType: String, Identifiable, CaseIterable {
     case ios = "iOS"
     case android = "Android"
     case more = "More"
-
+    
     var id: String { self.rawValue }
 }

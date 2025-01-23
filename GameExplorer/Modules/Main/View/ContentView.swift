@@ -37,6 +37,8 @@ struct MainView: View {
             }
             .task {
                 await viewModel.fetchGamesList()
+            }.onAppear{
+                viewModel.searchText = ""
             }
         }
     }
@@ -49,14 +51,15 @@ struct MainView: View {
             icon: "magnifyingglass",
             keyboardType: .default,
             isSecure: false,
-            onCommit: {
-                viewModel.performSearch()
+            onSubmit: {
+                     viewModel.performSearch()
             },
             maxLength: 50
         )
         .padding(.horizontal)
     }
 
+   
     // Helper View for Displaying Game List or Loading/Error
     private func GameListView() -> some View {
         ScrollView {

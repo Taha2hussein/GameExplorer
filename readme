@@ -1,0 +1,10 @@
+
+## Game Explorer
+
+in this task i used Moya pod and create network layer using alamofire and moya
+  
+used SwiftUI + combine
+  
+components to make code rausuble and generic
+
+removed pod from remote so you need to install pod first

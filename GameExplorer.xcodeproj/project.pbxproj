@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F054B4C83C4E1C648BAF63E /* Pods_GameExplorerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EB009AB229AC7834DF54B8 /* Pods_GameExplorerTests.framework */; };
+		7203D9B92D421E46001026B3 /* readme in Resources */ = {isa = PBXBuildFile; fileRef = 7203D9B82D421E46001026B3 /* readme */; };
 		7212F7C42D420D53004F8440 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212F7C32D420D53004F8440 /* CategoryButton.swift */; };
 		7212F7C62D420F1D004F8440 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212F7C52D420F1D004F8440 /* CardView.swift */; };
 		7212F7CB2D421659004F8440 /* GiveawayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212F7CA2D421659004F8440 /* GiveawayDetailView.swift */; };
@@ -68,6 +69,7 @@
 		414CF2748455865AD391D0F8 /* Pods-GameExplorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameExplorer.release.xcconfig"; path = "Target Support Files/Pods-GameExplorer/Pods-GameExplorer.release.xcconfig"; sourceTree = "<group>"; };
 		42529AC233552761C977B52C /* Pods-GameExplorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameExplorer.debug.xcconfig"; path = "Target Support Files/Pods-GameExplorer/Pods-GameExplorer.debug.xcconfig"; sourceTree = "<group>"; };
 		6178127F851C8AE523FA869A /* Pods_GameExplorer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameExplorer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7203D9B82D421E46001026B3 /* readme */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
 		7212F7C32D420D53004F8440 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		7212F7C52D420F1D004F8440 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		7212F7CA2D421659004F8440 /* GiveawayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveawayDetailView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		7214C1FB2D41397700235779 = {
 			isa = PBXGroup;
 			children = (
+				7203D9B82D421E46001026B3 /* readme */,
 				7214C2062D41397700235779 /* GameExplorer */,
 				7214C2172D41397800235779 /* GameExplorerTests */,
 				7214C2212D41397800235779 /* GameExplorerUITests */,
@@ -479,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7203D9B92D421E46001026B3 /* readme in Resources */,
 				7214C20F2D41397800235779 /* Preview Assets.xcassets in Resources */,
 				7214C20C2D41397800235779 /* Assets.xcassets in Resources */,
 			);

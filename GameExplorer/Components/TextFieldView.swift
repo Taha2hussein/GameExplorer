@@ -12,7 +12,7 @@ struct TextFieldComponent: View {
     let icon: String?
     let keyboardType: UIKeyboardType
     let isSecure: Bool
-    let onCommit: (() -> Void)?
+    let onSubmit: (() -> Void)?  // Change from onCommit to onSubmit
     let maxLength: Int?
 
     var body: some View {
@@ -26,7 +26,7 @@ struct TextFieldComponent: View {
             // TextField or SecureField based on `isSecure`
             if isSecure {
                 SecureField(placeholder, text: $text, onCommit: {
-                    onCommit?()
+                    onSubmit?()  // Call the async function
                 })
                 .onChange(of: text) { oldValue, newValue in
                     applyMaxLength(newValue)
@@ -34,15 +34,16 @@ struct TextFieldComponent: View {
                 .font(.body)
                 .foregroundColor(.primary)
             } else {
-                TextField(placeholder, text: $text, onCommit: {
-                    onCommit?()
-                })
-                .onChange(of: text) { oldValue, newValue in
-                    applyMaxLength(newValue)
-                }
-                .font(.body)
-                .foregroundColor(.primary)
-                .keyboardType(keyboardType)
+                TextField(placeholder, text: $text)
+                    .onSubmit {
+                        onSubmit?()  // Use onSubmit to handle async call
+                    }
+                    .onChange(of: text) { oldValue, newValue in
+                        applyMaxLength(newValue)
+                    }
+                    .font(.body)
+                    .foregroundColor(.primary)
+                    .keyboardType(keyboardType)
             }
 
             // Clear Button
@@ -68,4 +69,3 @@ struct TextFieldComponent: View {
         }
     }
 }
-

@@ -10,8 +10,7 @@ import Foundation
 
 protocol GameRepository {
     func fetchGamesList() -> AnyPublisher<[Giveaway], APIError>
-//    func searchMovie(query: String) -> AnyPublisher<MovieResponse, APIError>
-//    func fetchMovieDetails(movie_id: Int) -> AnyPublisher<MovieDetailResponse, APIError>
+    func searchGame(query: String) -> AnyPublisher<[Giveaway], APIError>
 }
 
 protocol HasGameRepository {
