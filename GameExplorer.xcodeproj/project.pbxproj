@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0F054B4C83C4E1C648BAF63E /* Pods_GameExplorerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EB009AB229AC7834DF54B8 /* Pods_GameExplorerTests.framework */; };
 		7203D9B92D421E46001026B3 /* readme in Resources */ = {isa = PBXBuildFile; fileRef = 7203D9B82D421E46001026B3 /* readme */; };
+		7203D9CB2D423D4A001026B3 /* MockGamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203D9CA2D423D4A001026B3 /* MockGamesRepository.swift */; };
+		7203D9CD2D424300001026B3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203D9C82D423D2B001026B3 /* MainViewModel.swift */; };
+		7203D9CF2D424398001026B3 /* DetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203D9CE2D424398001026B3 /* DetailsViewModelTests.swift */; };
+		7203D9D22D4244C1001026B3 /* MainViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203D9D12D4244C1001026B3 /* MainViewSnapshotTests.swift */; };
 		7212F7C42D420D53004F8440 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212F7C32D420D53004F8440 /* CategoryButton.swift */; };
 		7212F7C62D420F1D004F8440 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212F7C52D420F1D004F8440 /* CardView.swift */; };
 		7212F7CB2D421659004F8440 /* GiveawayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212F7CA2D421659004F8440 /* GiveawayDetailView.swift */; };
@@ -17,7 +21,6 @@
 		7214C20A2D41397700235779 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7214C2092D41397700235779 /* ContentView.swift */; };
 		7214C20C2D41397800235779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7214C20B2D41397800235779 /* Assets.xcassets */; };
 		7214C20F2D41397800235779 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7214C20E2D41397800235779 /* Preview Assets.xcassets */; };
-		7214C2192D41397800235779 /* GameExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7214C2182D41397800235779 /* GameExplorerTests.swift */; };
 		7214C2232D41397800235779 /* GameExplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7214C2222D41397800235779 /* GameExplorerUITests.swift */; };
 		7214C2252D41397800235779 /* GameExplorerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7214C2242D41397800235779 /* GameExplorerUITestsLaunchTests.swift */; };
 		7214C2362D413FF600235779 /* EnviromentConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7214C2352D413FF600235779 /* EnviromentConfigurations.swift */; };
@@ -70,6 +73,10 @@
 		42529AC233552761C977B52C /* Pods-GameExplorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameExplorer.debug.xcconfig"; path = "Target Support Files/Pods-GameExplorer/Pods-GameExplorer.debug.xcconfig"; sourceTree = "<group>"; };
 		6178127F851C8AE523FA869A /* Pods_GameExplorer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameExplorer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7203D9B82D421E46001026B3 /* readme */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme; sourceTree = "<group>"; };
+		7203D9C82D423D2B001026B3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		7203D9CA2D423D4A001026B3 /* MockGamesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGamesRepository.swift; sourceTree = "<group>"; };
+		7203D9CE2D424398001026B3 /* DetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelTests.swift; sourceTree = "<group>"; };
+		7203D9D12D4244C1001026B3 /* MainViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSnapshotTests.swift; sourceTree = "<group>"; };
 		7212F7C32D420D53004F8440 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		7212F7C52D420F1D004F8440 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		7212F7CA2D421659004F8440 /* GiveawayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveawayDetailView.swift; sourceTree = "<group>"; };
@@ -80,7 +87,6 @@
 		7214C20B2D41397800235779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7214C20E2D41397800235779 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7214C2142D41397800235779 /* GameExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7214C2182D41397800235779 /* GameExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameExplorerTests.swift; sourceTree = "<group>"; };
 		7214C21E2D41397800235779 /* GameExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameExplorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7214C2222D41397800235779 /* GameExplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameExplorerUITests.swift; sourceTree = "<group>"; };
 		7214C2242D41397800235779 /* GameExplorerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameExplorerUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -221,7 +227,9 @@
 		7214C2172D41397800235779 /* GameExplorerTests */ = {
 			isa = PBXGroup;
 			children = (
-				7214C2182D41397800235779 /* GameExplorerTests.swift */,
+				7203D9C82D423D2B001026B3 /* MainViewModel.swift */,
+				7203D9CA2D423D4A001026B3 /* MockGamesRepository.swift */,
+				7203D9CE2D424398001026B3 /* DetailsViewModelTests.swift */,
 			);
 			path = GameExplorerTests;
 			sourceTree = "<group>";
@@ -231,6 +239,7 @@
 			children = (
 				7214C2222D41397800235779 /* GameExplorerUITests.swift */,
 				7214C2242D41397800235779 /* GameExplorerUITestsLaunchTests.swift */,
+				7203D9D12D4244C1001026B3 /* MainViewSnapshotTests.swift */,
 			);
 			path = GameExplorerUITests;
 			sourceTree = "<group>";
@@ -449,6 +458,7 @@
 					};
 					7214C2132D41397800235779 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 						TestTargetID = 7214C2032D41397700235779;
 					};
 					7214C21D2D41397800235779 = {
@@ -466,6 +476,8 @@
 				Base,
 			);
 			mainGroup = 7214C1FB2D41397700235779;
+			packageReferences = (
+			);
 			productRefGroup = 7214C2052D41397700235779 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -646,7 +658,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7214C2192D41397800235779 /* GameExplorerTests.swift in Sources */,
+				7203D9CF2D424398001026B3 /* DetailsViewModelTests.swift in Sources */,
+				7203D9CB2D423D4A001026B3 /* MockGamesRepository.swift in Sources */,
+				7203D9CD2D424300001026B3 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,6 +670,7 @@
 			files = (
 				7214C2232D41397800235779 /* GameExplorerUITests.swift in Sources */,
 				7214C2252D41397800235779 /* GameExplorerUITestsLaunchTests.swift in Sources */,
+				7203D9D22D4244C1001026B3 /* MainViewSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,15 +877,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4KP7P7XSCQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Etisalat.GameExplorerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameExplorer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GameExplorer";
@@ -883,9 +901,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4KP7P7XSCQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -906,6 +926,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4KP7P7XSCQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Etisalat.GameExplorerUITests;
@@ -925,6 +946,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4KP7P7XSCQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Etisalat.GameExplorerUITests;

@@ -68,10 +68,14 @@ class MainViewModel: ObservableObject {
     func filterGamesByCategory() {
         if selectedCategory == .all {
             filteredGames = gameList
+            print(filteredGames.count , "filteredGames.coint")
         } else {
-            filteredGames = gameList.filter { $0.platforms.contains(selectedCategory.rawValue) == true }
+            filteredGames = gameList.filter {
+                $0.platforms.lowercased().contains(selectedCategory.rawValue.lowercased())
+            }
         }
     }
+
     
     // Handle error
     private func handleError(_ error: Error) {
